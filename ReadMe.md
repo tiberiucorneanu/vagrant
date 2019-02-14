@@ -67,13 +67,63 @@
 $ vagrant up
 #drop you into a full-fledged SSH session. Close SSH session can be done with CTRL+D
 $ vagrant ssh
-# vagrant will terminate the use of any resources by the VM
-# To completely remove the box file, you can use the vagrant box remove command
-$ vagrant destroy
 $ vagrant reload
-# to exit from VM and go to host machine
+#to exit from VM and go to host machine
 $ exit
+<br>
+#save the current running state of the machine and stop it
+#vagrant up will resumed from where you left off
+#fast but still eats up my disk space
+$vagrant suspend
+#shut down the guest. will cleanly shut down your machine, preserving the contents of disk but it take extra time to start and also consume disk space
+$vagrant halt
+#vagrant will terminate the use of any resources by the VM
+#To completely remove the box file, you can use the vagrant box remove command
+$ vagrant destroy
 </pre>
 
 <h3>Synced folders</h3>
 With synced folders, you can continue to use your own editor on your host machine and have the files sync into the guest machine.<br>
+
+<h3>Provisioning</h3>
+<pre>
+#!/usr/bin/env bash
+
+apt-get update
+apt-get install -y apache2
+if ! [ -L /var/www ]; then
+  rm -rf /var/www
+  ln -fs /vagrant /var/www
+fi
+</pre>
+
+<pre>
+Vagrant.configure("2") do |config|
+  config.vm.box = "hashicorp/precise64"
+  config.vm.provision :shell, path: "bootstrap.sh"
+  #line1
+  config.vm.network :forwarded_port, guest: 80, host: 4567
+end
+</pre>
+<p>
+to reload the vagrant call "$ vagrant reload --provision" which will restart the VM skipping the initial import step<br>
+you cannot see the website from your own browser yet, for this you need networking
+</p>
+
+<h3>Networking</h3>
+<p>
+we have a web server up and running with the ability to modify files from our host and have them automatically synced to the guest<br>
+networrking feature will give us additional option for accessing the machine from our host machine.<br>
+#line1 <b>Potr forwarding</b> specify ports on the guest machine to share via a port to the host machine.<br>
+Once the machine is running again, load http://127.0.0.1:4567 in your browser. You should see a web page that is being served from the virtual machine that was automatically setup by Vagrant.
+
+<h3>Vahrant Share ???</h3>
+<p><a href="https://www.youtube.com/watch?v=eSxTRhMIoz8">Make your package.bok file</a> and share your virtualbox dev env<br>
+https://dashboard.ngrok.com/get-started    <br>
+https://www.yeahhub.com/install-use-ngrok-complete-guide-2018/ <br>
+https://vimeo.com/87525972 <br>
+</p>
+<pre> 
+$ vagrant pugin install vagrant-share
+</pre>
+</p>
