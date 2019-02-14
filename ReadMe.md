@@ -4,4 +4,14 @@
   <a href="https://blog.scottlowe.org/2016/01/18/multi-machine-vagrant-json/">About vagrant.json</a><br>
   <a href="https://www.youtube.com/watch?v=sjV4JdAw-Vs">Tutorial 1 part1</a><br>
   <a href="https://www.youtube.com/watch?v=X8iC5Q5lKLg">Tutorial 1 part2 </a><br>
+  
+  <pre class="highlight plaintext">
+    <code>
+      $ mkdir vagrant_getting_started
+$ cd vagrant_getting_started
+$ vagrant init hashicorp/precise64
+    </code>
+  </pre>
+  
 </p>
+
