@@ -23,6 +23,7 @@
   Vagrant.configure("2") do |config|
   # v2 config...
   Vagrant.require_version ">= 1.3.5", "< 1.4.0"
+  config.vm.box_version = "20190206.0.0"
   end
   </pre>
     
