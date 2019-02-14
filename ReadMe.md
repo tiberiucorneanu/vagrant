@@ -25,7 +25,8 @@
   #line2
   Vagrant.require_version ">= 1.3.5", "< 1.4.0"
   #line3
-  config.vm.box_version = "20190206.0.0"
+  #config.vm.box_version = "20190206.0.0"
+  #config.vm.box_url = "https://app.vagrantup.com/ubuntu/boxes/trusty64"
   #line4
   config.vm.post_up_message ="Your VM is know done and you can enter in by using vagrant ssh"
   #line5  
@@ -34,7 +35,6 @@
   end  
   end
   </pre>
-    
 <p>  
     #line1 "2" represents the version of the configuration object used for block configuration(section between do and end)<br>
     "2" represents the configuration for 1.1+ leading up to 2.0.x <br>
@@ -49,6 +49,7 @@
  </p>
     <pre>
     Vagrant.configure("2") do |config|
+      #line1
       config.vm.box = "precise64"
       config.vm.provider "vmware_fusion" do |v, override|
         override.vm.box = "precise64_fusion"
@@ -57,6 +58,20 @@
     </pre>
 <p>
   In the above case, Vagrant will use the "precise64" box by default, but will use "precise64_fusion" if the VMware Fusion provider is used.
+  #line1 will automatically downoad and add the box when it is run
 </p>
   
+<h3>Vagrant comands</h3>
+<pre>
+#boot the agrant
+$ vagrant up
+#drop you into a full-fledged SSH session. Close SSH session can be done with CTRL+D
+$ vagrant ssh
+# vagrant will terminate the use of any resources by the VM
+# To completely remove the box file, you can use the vagrant box remove command
+$ vagrant destroy
+$ vagrant reload
+</pre>
 
+<h3>Synced folders</h3>
+With synced folders, you can continue to use your own editor on your host machine and have the files sync into the guest machine.<br>
