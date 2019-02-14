@@ -12,7 +12,7 @@
   $ vagrant init hashicorp/precise64
   </pre>
   
-<h2>Vagrantfile (vagrant up) with sintax in Ruby but not used<h2>
+<h2>Vagrantfile (vagrant up) with sintax in Ruby but not used</h2>
 <p>
   describe the type of virtual machine<br>
   one vagrantfile per project comited to version control<br>
