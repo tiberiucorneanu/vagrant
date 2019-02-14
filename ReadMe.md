@@ -1,3 +1,5 @@
+<p><b>Youtube </b><a href="https://www.youtube.com/watch?v=jj6gJ8ulsiM&list=PLLhEJK7fQIxCBqSuBhph22GTeq7HHdxB5">de urmarit o sa mai posteze</a></p>
+
 <h2>YouTube Channels / Video Material</h2>
 <p>
   <a href="https://www.youtube.com/watch?v=vBreXjkizgo&t=2376s">Vagrant introduction</a><br>
