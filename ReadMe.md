@@ -71,6 +71,8 @@ $ vagrant ssh
 # To completely remove the box file, you can use the vagrant box remove command
 $ vagrant destroy
 $ vagrant reload
+# to exit from VM and go to host machine
+$ exit
 </pre>
 
 <h3>Synced folders</h3>
