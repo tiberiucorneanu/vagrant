@@ -5,7 +5,10 @@
 Vagrant.configure("2") do |config|
   # Box Setting
   config.vm.box = "ubuntu/trusty64"
-
+  #config.vm.box_version = "20190206.0.0"
+  #config.vm.box_url = "https://app.vagrantup.com/ubuntu/boxes/trusty64"
+  #mesajul apare la final
+  config.vm.post_up_message ="Felicitari barosane ai un ghiul din partea mea"
   
   # Provider-specific 
   config.vm.provider "virtualbox" do |vb|
@@ -20,7 +23,7 @@ Vagrant.configure("2") do |config|
     vb.memory = "1024"
     vb.cpus = 4
     #----- in cmd: vagrant reload
-   end
+  end
 
   # Network Settings 
   #---guest is my vm.box, where 80 is default for apache and the host is my localmachine
@@ -55,5 +58,6 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
 
+  #https://www.vagrantup.com/intro/getting-started/provisioning.html
   config.vm.provision "shell", path: "bootstrap.sh"
 end
