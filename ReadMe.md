@@ -22,19 +22,41 @@
   <pre>
   Vagrant.configure("2") do |config|
   # v2 config...
+  #line2
   Vagrant.require_version ">= 1.3.5", "< 1.4.0"
+  #line3
   config.vm.box_version = "20190206.0.0"
+  #line4
+  config.vm.post_up_message ="Your VM is know done and you can enter in by using vagrant ssh"
+  #line5  
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
+  end  
   end
   </pre>
     
 <p>  
-    in line 1 "2" represents the version of the configuration object used for block configuration(section between do and end)<br>
+    #line1 "2" represents the version of the configuration object used for block configuration(section between do and end)<br>
     "2" represents the configuration for 1.1+ leading up to 2.0.x <br>
     only a single "config" version can be used or we can mix them e.g. if you found some useful configuratuon snippet <br>
     <br>
-    in line 2 Minimum vagran version 
+    #line2 Minimum vagran version 
     <a href="https://www.vagrantup.com/docs/vagrantfile/tips.html">create three machines</a><br>
     <a href="https://www.vagrantup.com/docs/vagrantfile/machine_settings.html">machine settings</a><br>
+    <br>
+    #line5 configure multiple providers. "virtualbox" is the name providet being configured<br>
+        inside is a inner block with custom configuration to configurate the provider<br>
+ </p>
+    <pre>
+    Vagrant.configure("2") do |config|
+      config.vm.box = "precise64"
+      config.vm.provider "vmware_fusion" do |v, override|
+        override.vm.box = "precise64_fusion"
+      end
+    end
+    </pre>
+<p>
+  In the above case, Vagrant will use the "precise64" box by default, but will use "precise64_fusion" if the VMware Fusion provider is used.
 </p>
   
 
