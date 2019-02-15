@@ -82,6 +82,9 @@ $vagrant halt
 #vagrant will terminate the use of any resources by the VM
 #To completely remove the box file, you can use the vagrant box remove command
 $ vagrant destroy
+#
+$ vagrant box outdated
+$ vagrant box update
 </pre>
 
 <h3>Synced folders</h3>
@@ -129,3 +132,25 @@ https://vimeo.com/87525972 <br>
 $ vagrant pugin install vagrant-share
 </pre>
 </p>
+
+<h3>Box File</h3>
+<p>
+metadata.json  is only one per box file, whereas whereas one catalog metadata JSON document can describe multiple versions of the same box, potentially spanning multiple providers.<br>
+metadata.json must contain at least the <b>"provider"</b> using this to verify the provider of the box
+no metadata.json or the JSON is invalid with no "provider" key => ERROR
+<pre>
+{
+  "provider": "virtualbox"
+}
+</pre>
+</p>
+
+<h3>Box info</h3>
+<p>
+by running <b>$ vagrant box list -i</b> you can see aditional info<br>
+&nbsp; &nbsp; &nbsp; &nbsp; brian@localghost % vagrant box list -i<br>
+&nbsp; &nbsp; &nbsp; &nbsp; hashicorp/precise64     (virtualbox, 1.0.0)<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   - author: brian<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  - homepage: https://www.vagrantup.com<br>
+</p>
+
