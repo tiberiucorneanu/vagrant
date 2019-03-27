@@ -1,8 +1,8 @@
 <p><b>Youtube </b><a href="https://www.youtube.com/watch?v=jj6gJ8ulsiM&list=PLLhEJK7fQIxCBqSuBhph22GTeq7HHdxB5">de urmarit o sa mai posteze</a></p>    
 
 [api vagrant?](https://searchitoperations.techtarget.com/tutorial/Create-Vagrant-boxes-with-Packer-for-rapid-IT-environment-builds)   
-[legatura intre json si vagrant cu un simplu exemplu](https://blog.scottlowe.org/2016/01/18/multi-machine-vagrant-json/)
-
+[legatura intre json si vagrant cu un simplu exemplu](https://blog.scottlowe.org/2016/01/18/multi-machine-vagrant-json/)    
+learn tools vagrant git [repo](https://github.com/scottslowe/learning-tools/tree/master/vagrant)
 <h2>YouTube Channels / Video Material</h2>
 <p>
   <a href="https://www.youtube.com/watch?v=vBreXjkizgo&t=2376s">Vagrant introduction</a><br>
