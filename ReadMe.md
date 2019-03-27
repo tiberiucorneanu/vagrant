@@ -1,4 +1,7 @@
-<p><b>Youtube </b><a href="https://www.youtube.com/watch?v=jj6gJ8ulsiM&list=PLLhEJK7fQIxCBqSuBhph22GTeq7HHdxB5">de urmarit o sa mai posteze</a></p>
+<p><b>Youtube </b><a href="https://www.youtube.com/watch?v=jj6gJ8ulsiM&list=PLLhEJK7fQIxCBqSuBhph22GTeq7HHdxB5">de urmarit o sa mai posteze</a></p>    
+
+[api vagrant?](https://searchitoperations.techtarget.com/tutorial/Create-Vagrant-boxes-with-Packer-for-rapid-IT-environment-builds)
+
 
 <h2>YouTube Channels / Video Material</h2>
 <p>
