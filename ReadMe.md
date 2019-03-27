@@ -2,7 +2,9 @@
 
 [api vagrant?](https://searchitoperations.techtarget.com/tutorial/Create-Vagrant-boxes-with-Packer-for-rapid-IT-environment-builds)   
 [legatura intre json si vagrant cu un simplu exemplu](https://blog.scottlowe.org/2016/01/18/multi-machine-vagrant-json/)    
-learn tools vagrant git [repo](https://github.com/scottslowe/learning-tools/tree/master/vagrant)
+learn tools vagrant git [repo](https://github.com/scottslowe/learning-tools/tree/master/vagrant)  
+[connect to virtualbox from another pc](https://www.google.ch/search?client=opera&hs=RUC&ei=0IabXLz8I-PRgwec_5bgAg&q=connect+to+virtualbox+from+another+pc&oq=connect+to+virtualbox+from+another+pc&gs_l=psy-ab.3...34780.39295..39470...0.0..0.124.1137.0j10......0....1..gws-wiz.......0i71j35i304i39j33i10.0QT8Eau0ow8#kpvalbx=1)    
+[create a vm using virtualbox](https://www.google.ch/search?client=opera&q=create+a+vm+using+virtualbox&sourceid=opera&ie=UTF-8&oe=UTF-8#kpvalbx=1)
 <h2>YouTube Channels / Video Material</h2>
 <p>
   <a href="https://www.youtube.com/watch?v=vBreXjkizgo&t=2376s">Vagrant introduction</a><br>
